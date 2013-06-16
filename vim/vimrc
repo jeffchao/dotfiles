@@ -10,4 +10,5 @@ set noswapfile
 set number
 set t_Co=16
 set et
+match ErrorMsg '\%100v.\+'
 retab
