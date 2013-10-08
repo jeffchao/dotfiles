@@ -1,3 +1,4 @@
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 syntax on
 colorscheme jeff
 set backspace=indent,eol,start
@@ -10,5 +11,7 @@ set noswapfile
 set number
 set t_Co=16
 set et
-match ErrorMsg '\%100v.\+'
+match ErrorMsg '\%>100v.\+'
+set omnifunc=javacomplete#Complete
+set completefunc=javacomplete#CompleteParamsInfo
 retab
