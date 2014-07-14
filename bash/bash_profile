@@ -1,8 +1,13 @@
-export PATH=/usr/local/bin:./node_modules/.bin:/usr/local/share/npm/bin/:$PATH
+export GOPATH=$HOME/src/go
+export GRADLE_HOME=$HOME/.gradle
+export PATH=/usr/local/bin:./node_modules/.bin:$PATH:$GOPATH/bin:$GRADLE_HOME/bin
 
 export EDITOR=vim
 
-export PS1="\[\033[36m\]\u\[\033[m\]@\[\033[32m\]\h:\[\033[33;1m\]\w\[\033[m\]\$ "
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_05.jdk/Contents/Home/
+
+export DOCKER_HOST=tcp://192.168.59.103:2375
+
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
@@ -10,15 +15,15 @@ alias ls='ls -GFh'
 alias chrome="open -a google\ chrome"
 alias safari="open -a safari"
 alias firefox="open -a firefox"
-alias ichat="open -a ichat"
 alias ical="open -a ical"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
-alias ssh-tor='ssh -o "ProxyCommand nc -X 5 -x 127.0.0.1:9050 %h %p"'
+
+alias idea='open -a IntelliJ\ IDEA\ 13\ CE'
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export PS1="\[\033[36m\]jchao\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]$ "
 
-[ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
+# source ~/.nvm/nvm.sh
 
-source /usr/local/opt/autoenv/activate.sh
+# [ -s $HOME/.nvm/nvm.sh ] && . $HOME/.nvm/nvm.sh # This loads NVM
