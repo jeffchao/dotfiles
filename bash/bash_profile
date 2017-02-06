@@ -1,8 +1,9 @@
-source ~/.profile
-
 export GOPATH=$HOME/src/go
-export GRADLE_HOME=$HOME/gradle
-export PATH=/usr/local/bin:./node_modules/.bin:$PATH:$GOPATH/bin:$GRADLE_HOME/bin:$HOME/Library/Haskell/bin
+
+export PATH=/usr/local/bin:./node_modules/.bin:$PATH:$GOPATH/bin:/bin:$HOME/Library/Haskell/bin:$HOME/scala/bin
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export EDITOR=vim
 
@@ -23,5 +24,11 @@ alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.lo
 
 alias idea='open -a IntelliJ\ IDEA\ 13\ CE'
 
+source ~/.heroku_dod
+
 export PS1="\[\033[36m\]jchao\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]$ "
 
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+# May be used to install Gradle, etc.
+export SDKMAN_DIR="/Users/jchao/.sdkman"
+[[ -s "/Users/jchao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jchao/.sdkman/bin/sdkman-init.sh"
