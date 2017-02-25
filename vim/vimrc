@@ -1,6 +1,21 @@
-set runtimepath^=~/.vim/bundle/ctrlp.vim
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --gocode-completer' }
+Plug 'ntpeters/vim-better-whitespace'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'mileszs/ack.vim'
+
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+
+call plug#end()
+
 syntax on
+filetype plugin indent on
+
 colorscheme jeff
+
 set backspace=indent,eol,start
 set expandtab
 set softtabstop=2
@@ -11,7 +26,14 @@ set noswapfile
 set number
 set t_Co=16
 set et
-match ErrorMsg '\%>100v.\+'
-set omnifunc=javacomplete#Complete
-set completefunc=javacomplete#CompleteParamsInfo
+
+set shellpipe=> "ack vim bug
+set completeopt-=preview
+
+map T <plug>NERDTreeTabsToggle<CR>
+map F <plug>NERDTreeTabsFind<CR>
+
+let g:ycm_auto_trigger = 0
+let g:ycm_complete_in_strings = 0
+
 retab
