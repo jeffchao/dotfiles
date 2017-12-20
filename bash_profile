@@ -7,7 +7,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 export EDITOR=vim
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home/
 export CLASSPATH=.:$HOME/.java/junit-4.12.jar:$HOME/.java/hamcrest-core-1.3.jar
 
 export DOCKER_HOST=tcp://192.168.59.103:2375
@@ -19,9 +19,7 @@ alias ls='ls -GFh'
 alias chrome="open -a google\ chrome"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 
-alias idea='open -a IntelliJ\ IDEA\ 13\ CE'
-
-source ~/.heroku_dod
+alias idea='open -a IntelliJ\ IDEA\ CE'
 
 export PS1="\[\033[36m\]jchao\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]$ "
 

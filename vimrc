@@ -1,5 +1,4 @@
 set nocompatible
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdtree'
@@ -28,16 +27,20 @@ set noswapfile
 set number
 set t_Co=16
 set et
+set hlsearch
 
 set shellpipe=> "ack vim bug
 set completeopt-=preview "omnicomplete top window
 
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gometalinter', 'govet']
-let g:syntastic_go_gometalinter_post_args = "--disable-all --enable=deadcode --enable=errcheck --enable=interfacer --enable=unconvert --enable=goconst --enable=gosimple --enable=staticcheck --deadline=6s"
+let g:syntastic_go_gometalinter_post_args = "--disable-all --enable=deadcode --enable=errcheck --enable=interfacer --enable=unconvert --enable=goconst --enable=gosimple --enable=staticcheck --deadline=10s"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
+
+:nnoremap <silent><esc> :noh<CR>
+:nnoremap <esc>^[ <esc>^[
 
 map T <plug>NERDTreeTabsToggle<CR>
 map F <plug>NERDTreeTabsFind<CR>

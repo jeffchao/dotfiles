@@ -3,3 +3,5 @@
 	email = jeffchao@me.com
 [push]
 	default = nothing
+[core]
+  excludesfile = /Users/jchao/.gitignore
