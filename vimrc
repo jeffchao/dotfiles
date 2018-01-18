@@ -34,10 +34,11 @@ set completeopt-=preview "omnicomplete top window
 
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gometalinter', 'govet']
-let g:syntastic_go_gometalinter_post_args = "--disable-all --enable=deadcode --enable=errcheck --enable=interfacer --enable=unconvert --enable=goconst --enable=gosimple --enable=staticcheck --deadline=10s"
+let g:syntastic_go_gometalinter_post_args = "--disable-all --enable=deadcode --enable=errcheck --enable=interfacer --enable=unconvert --enable=goconst --enable=gosimple --enable=staticcheck --deadline=10s --exclude=vendor"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
+let g:go_fmt_command = "goimports"
 
 :nnoremap <silent><esc> :noh<CR>
 :nnoremap <esc>^[ <esc>^[
