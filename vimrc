@@ -40,6 +40,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
 let g:go_fmt_command = "goimports"
 
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]vendor$',
+  \ }
+
 :nnoremap <silent><esc> :noh<CR>
 :nnoremap <esc>^[ <esc>^[
 
