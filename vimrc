@@ -33,12 +33,21 @@ set shellpipe=> "ack vim bug
 set completeopt-=preview "omnicomplete top window
 
 let g:syntastic_ruby_checkers = ['rubocop', 'mri']
-let g:syntastic_go_checkers = ['go', 'gofmt', 'golint', 'gometalinter', 'govet']
-let g:syntastic_go_gometalinter_post_args = "--disable-all --enable=deadcode --enable=errcheck --enable=interfacer --enable=unconvert --enable=goconst --enable=gosimple --enable=staticcheck --deadline=10s --exclude=vendor"
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
+
+let g:go_echo_command_info=0
 let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_fmt_autosave = 1
+"let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
+let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'goconst', 'deadcode', 'gosimple', 'staticcheck', 'errcheck', 'interfacer']
+let g:go_metalinter_autosave = 1
 
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/]vendor$',
