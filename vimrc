@@ -45,7 +45,6 @@ let g:go_highlight_methods = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 let g:go_fmt_autosave = 1
-"let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'errcheck', 'interfacer', 'unconvert', 'goconst', 'gosimple', 'staticcheck']
 let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'goconst', 'deadcode', 'gosimple', 'staticcheck', 'errcheck', 'interfacer']
 let g:go_metalinter_autosave = 1
 
