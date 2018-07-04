@@ -8,9 +8,7 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export EDITOR=vim
 
 export JAVA_HOME=/Users/jchao/.sdkman/candidates/java/current
-export CLASSPATH=.:$HOME/.java/junit-4.12.jar:$HOME/.java/hamcrest-core-1.3.jar
-
-export DOCKER_HOST=tcp://192.168.59.103:2375
+export CLASSPATH=.:$HOME/.java/junit5-jupiter-api.jar:$HOME/.java/junit5-platform-console-standalone.jar
 
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
