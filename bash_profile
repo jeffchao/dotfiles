@@ -1,9 +1,4 @@
-export GOPATH=$HOME/src/go
-
-export PATH=/usr/local/bin:./node_modules/.bin:$PATH:$GOPATH/bin:/bin
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+export PATH=/usr/local/bin:/usr/bin:/usr/sbin:/sbin:/bin
 
 export EDITOR=vim
 
@@ -19,7 +14,13 @@ alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.lo
 
 alias idea='open -a IntelliJ\ IDEA\ CE'
 
-export PS1="\[\033[36m\]jchao\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]$ "
+parse_git_branch() {
+     git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
+export PS1="\[\033[36m\]\u\[\033[m\]:\[\033[33;1m\]\w\[\033[m\]\[\033[32m\]\$(parse_git_branch)\[\033[00m\]$ "
+
+eval "$(newt --completion-script-bash)"
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 # May be used to install Gradle, etc.
