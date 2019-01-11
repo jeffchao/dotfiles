@@ -9,6 +9,7 @@ Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'vim-ruby/vim-ruby'
 Plug 'scrooloose/syntastic'
+Plug 'pangloss/vim-javascript'
 
 call plug#end()
 
@@ -49,7 +50,7 @@ let g:go_metalinter_autosave_enabled = ['vet', 'golint', 'goconst', 'deadcode', 
 let g:go_metalinter_autosave = 1
 
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/]vendor$',
+  \ 'dir':  '\v[\/](vendor|node_modules)$',
   \ }
 
 :nnoremap <silent><esc> :noh<CR>
