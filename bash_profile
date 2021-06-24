@@ -10,6 +10,7 @@ export LSCOLORS=ExFxBxDxCxegedabagacad
 alias ls='ls -GFh'
 
 alias chrome="open -a google\ chrome"
+alias firefox="open -a firefox.app"
 alias pg='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log'
 
 alias idea='open -a IntelliJ\ IDEA\ CE'
@@ -31,7 +32,7 @@ HISTTIMEFORMAT='%F %T '
 # Append command to history immediately after it's issued.
 PROMPT_COMMAND='history -a'
 
-parse_git_branch() {
+function parse_git_branch() {
      git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
@@ -44,6 +45,8 @@ eval "$(newt --completion-script-bash)"
 export SDKMAN_DIR="/Users/jchao/.sdkman"
 [[ -s "/Users/jchao/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/jchao/.sdkman/bin/sdkman-init.sh"
 
-eval "$(direnv hook bash)"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+eval "$(direnv hook bash)"

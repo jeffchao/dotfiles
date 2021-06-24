@@ -7,9 +7,8 @@ Plug 'ntpeters/vim-better-whitespace'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'vim-ruby/vim-ruby'
-Plug 'scrooloose/syntastic'
 Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/syntastic'
 
 call plug#end()
 
@@ -33,7 +32,6 @@ set hlsearch
 set shellpipe=> "ack vim bug
 set completeopt-=preview "omnicomplete top window
 
-let g:syntastic_ruby_checkers = ['rubocop', 'mri']
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_wq = 0
