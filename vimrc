@@ -9,6 +9,11 @@ Plug 'mileszs/ack.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
+Plug 'ap/vim-css-color'
+Plug 'lepture/vim-css'
 
 call plug#end()
 
@@ -50,6 +55,9 @@ let g:go_metalinter_autosave = 1
 let g:ctrlp_custom_ignore = {
   \ 'dir':  '\v[\/](vendor|node_modules)$',
   \ }
+
+autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart
+autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear
 
 :nnoremap <silent><esc> :noh<CR>
 :nnoremap <esc>^[ <esc>^[
