@@ -50,3 +50,4 @@ brew "wget"
 brew "wireshark", link: false
 brew "heroku/brew/heroku"
 cask "wireshark"
+brew "zsh"
