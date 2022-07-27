@@ -51,3 +51,5 @@ brew "wireshark", link: false
 brew "heroku/brew/heroku"
 cask "wireshark"
 brew "zsh"
+brew "pyenv"
+brew "romkatv/powerlevel10k/powerlevel10k"
